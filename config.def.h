@@ -96,7 +96,8 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#1d1f21",
+//"#1d1f21",
+	"#181616", /* default background colour */
 	"#cc6666",
 	"#b5bd68",
 	"#f0c674",
@@ -205,8 +206,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ControlMask,          XK_k,           kscrollup,      {.i = -1} },
 	{ ControlMask,          XK_j,           kscrolldown,    {.i = -1} },
-	{ MODKEY,               XK_k,           kscrollup,      {.i = 1} },
-	{ MODKEY,               XK_j,           kscrolldown,    {.i = 1} },
+	{ MODKEY|ShiftMask,     XK_k,           kscrollup,      {.i = 1} },
+	{ MODKEY|ShiftMask,     XK_j,           kscrolldown,    {.i = 1} },
 };
 
 /*
